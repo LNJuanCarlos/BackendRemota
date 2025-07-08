@@ -18,7 +18,7 @@ import javax.persistence.ColumnResult;
 @Entity
 @NamedStoredProcedureQuery(
     name = "certificado.obtenerPorOrden",
-    procedureName = "nombre_de_tu_procedimiento_sql",
+    procedureName = "sp_cr_listacab_web",
     resultSetMappings = "CertificadoMapping",
     parameters = {
         @StoredProcedureParameter(mode = ParameterMode.IN, name = "ordenTrabajo", type = String.class)
