@@ -1,0 +1,25 @@
+package prueba.remota.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import prueba.remota.dao.CertificadoMantenimientoDao;
+import prueba.remota.dto.CertificadoMantenimientoDto;
+
+@Service
+public class CertificadoMantenimientoService {
+	
+	 @Autowired
+	    private CertificadoMantenimientoDao dao;
+
+	    /*public List<CertificadoMantenimientoDto> obtener(String compania, int numeroDoc) {
+	        return dao.obtenerCertificado(compania, numeroDoc);
+	    }*/
+	    
+	    public CertificadoMantenimientoDto obtenerPorOrden(String ordenTrabajo) {
+	        return dao.obtenerPorOrden(ordenTrabajo);
+	    }
+
+}
