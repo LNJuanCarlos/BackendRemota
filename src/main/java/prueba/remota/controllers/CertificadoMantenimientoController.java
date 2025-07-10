@@ -22,13 +22,8 @@ public class CertificadoMantenimientoController {
     @Autowired
     private CertificadoMantenimientoService service;
 
-    @GetMapping("/orden/{ordenTrabajo}")
-    public ResponseEntity<CertificadoMantenimientoDto> obtenerPorOrden(@PathVariable String ordenTrabajo) {
-        CertificadoMantenimientoDto dto = service.obtenerPorOrden(ordenTrabajo);
-        if (dto == null) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(dto, HttpStatus.OK);
+    @GetMapping("/{companiaSocio}/{numerodoc}")
+    public List<CertificadoMantenimientoDto> obtener(@PathVariable String CompaniaSocio, @PathVariable int numerodoc) {
+        return service.obtener(CompaniaSocio, numerodoc);
     }
-
 }

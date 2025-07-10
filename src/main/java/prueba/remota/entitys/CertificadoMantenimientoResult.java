@@ -16,32 +16,38 @@ import java.util.Date;
 import javax.persistence.ColumnResult;
 
 @Entity
-@NamedStoredProcedureQuery(
-    name = "certificado.obtenerPorOrden",
-    procedureName = "sp_cr_listacab_web",
-    resultSetMappings = "CertificadoMapping",
-    parameters = {
-        @StoredProcedureParameter(mode = ParameterMode.IN, name = "ordenTrabajo", type = String.class)
-    }
-)
 @SqlResultSetMapping(
-    name = "CertificadoMapping",
+    name = "CertificadoMantenimientoMapping",
     classes = @ConstructorResult(
-        targetClass = CertificadoMantenimientoDto.class,
+        targetClass = prueba.remota.dto.CertificadoMantenimientoDto.class,
         columns = {
-            @ColumnResult(name = "nombreEmpresa", type = String.class),
-            @ColumnResult(name = "fecha", type = Date.class),
-            @ColumnResult(name = "cliente", type = String.class),
-            @ColumnResult(name = "descripcionMarca", type = String.class),
-            @ColumnResult(name = "modelo", type = String.class),
-            @ColumnResult(name = "color", type = String.class),
-            @ColumnResult(name = "numeroPlaca", type = String.class),
+            @ColumnResult(name = "CompaniaSocio", type = String.class),
+            @ColumnResult(name = "numeroDoc", type = Integer.class),
+            @ColumnResult(name = "fecha", type = String.class),
+            @ColumnResult(name = "ordenTrabajo", type = String.class),
+            @ColumnResult(name = "maquinaCodigo", type = String.class),
+            @ColumnResult(name = "maquinaHoraKilometraje", type = String.class),
             @ColumnResult(name = "maquinaKilometraje", type = Integer.class),
-            @ColumnResult(name = "maquinaHoraKilometraje", type = String.class)
+            @ColumnResult(name = "modelo", type = String.class),
+            @ColumnResult(name = "numeroPlaca", type = String.class),
+            @ColumnResult(name = "descripcionMarca", type = String.class),
+            @ColumnResult(name = "descripcionColor", type = String.class),
+            @ColumnResult(name = "nombreCompleto", type = String.class),
+            @ColumnResult(name = "nombreEmpresa", type = String.class),
+            @ColumnResult(name = "numeroMotor", type = String.class)
         }
     )
 )
+@NamedStoredProcedureQuery(
+    name = "CertificadoMantenimiento.obtenerCertificado",
+    procedureName = "sp_cr_listacab_web",
+    resultSetMappings = "CertificadoMantenimientoMapping",
+    parameters = {
+        @StoredProcedureParameter(mode = ParameterMode.IN, name = "CompaniaSocio", type = String.class),
+        @StoredProcedureParameter(mode = ParameterMode.IN, name = "numerodoc", type = Integer.class)
+    }
+)
 public class CertificadoMantenimientoResult {
     @Id
-    private Long id; // solo para que @Entity compile, no se usa
+    private Long id; // Campo ficticio para que sea @Entity
 }

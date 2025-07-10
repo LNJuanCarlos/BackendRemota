@@ -1,108 +1,154 @@
 package prueba.remota.dto;
 
-import java.util.Date;
-
 public class CertificadoMantenimientoDto {
 
-	    private String nombreEmpresa;
-	    private Date fecha;
-	    private String cliente;
-	    private String descripcionMarca;
-	    private String modelo;
-	    private String color;
-	    private String numeroPlaca;
-	    private Integer maquinaKilometraje;
-	    private String maquinaHoraKilometraje;
+	        private String CompaniaSocio;
+	        private int numeroDoc;
+	        private String fecha;
+	        private String ordenTrabajo;
+	        private String maquinaCodigo;
+	        private String maquinaHoraKilometraje;
+	        private int maquinaKilometraje;
+	        private String modelo;
+	        private String numeroPlaca;
+	        private String descripcionMarca;
+	        private String descripcionColor;
+	        private String nombreCompleto;
+	        private String nombreEmpresa;
+	        private String numeroMotor;
+	        
+			public CertificadoMantenimientoDto(String CompaniaSocio, int numeroDoc, String fecha, String ordenTrabajo,
+					String maquinaCodigo, String maquinaHoraKilometraje, int maquinaKilometraje, String modelo,
+					String numeroPlaca, String descripcionMarca, String descripcionColor, String nombreCompleto,
+					String nombreEmpresa, String numeroMotor) {
+				super();
+				this.CompaniaSocio = CompaniaSocio;
+				this.numeroDoc = numeroDoc;
+				this.fecha = fecha;
+				this.ordenTrabajo = ordenTrabajo;
+				this.maquinaCodigo = maquinaCodigo;
+				this.maquinaHoraKilometraje = maquinaHoraKilometraje;
+				this.maquinaKilometraje = maquinaKilometraje;
+				this.modelo = modelo;
+				this.numeroPlaca = numeroPlaca;
+				this.descripcionMarca = descripcionMarca;
+				this.descripcionColor = descripcionColor;
+				this.nombreCompleto = nombreCompleto;
+				this.nombreEmpresa = nombreEmpresa;
+				this.numeroMotor = numeroMotor;
+			}
 
-	    public CertificadoMantenimientoDto(String nombreEmpresa, Date fecha, String cliente,
-	                                       String descripcionMarca, String modelo, String color,
-	                                       String numeroPlaca, Integer maquinaKilometraje,
-	                                       String maquinaHoraKilometraje) {
-	        this.nombreEmpresa = nombreEmpresa;
-	        this.fecha = fecha;
-	        this.cliente = cliente;
-	        this.descripcionMarca = descripcionMarca;
-	        this.modelo = modelo;
-	        this.color = color;
-	        this.numeroPlaca = numeroPlaca;
-	        this.maquinaKilometraje = maquinaKilometraje;
-	        this.maquinaHoraKilometraje = maquinaHoraKilometraje;
-	    }
+			public String getCompaniaSocio() {
+				return CompaniaSocio;
+			}
 
-		public String getNombreEmpresa() {
-			return nombreEmpresa;
-		}
+			public void setCompaniaSocio(String CompaniaSocio) {
+				this.CompaniaSocio = CompaniaSocio;
+			}
 
-		public void setNombreEmpresa(String nombreEmpresa) {
-			this.nombreEmpresa = nombreEmpresa;
-		}
+			public int getNumeroDoc() {
+				return numeroDoc;
+			}
 
-		public Date getFecha() {
-			return fecha;
-		}
+			public void setNumeroDoc(int numeroDoc) {
+				this.numeroDoc = numeroDoc;
+			}
 
-		public void setFecha(Date fecha) {
-			this.fecha = fecha;
-		}
+			public String getFecha() {
+				return fecha;
+			}
 
-		public String getCliente() {
-			return cliente;
-		}
+			public void setFecha(String fecha) {
+				this.fecha = fecha;
+			}
 
-		public void setCliente(String cliente) {
-			this.cliente = cliente;
-		}
+			public String getOrdenTrabajo() {
+				return ordenTrabajo;
+			}
 
-		public String getDescripcionMarca() {
-			return descripcionMarca;
-		}
+			public void setOrdenTrabajo(String ordenTrabajo) {
+				this.ordenTrabajo = ordenTrabajo;
+			}
 
-		public void setDescripcionMarca(String descripcionMarca) {
-			this.descripcionMarca = descripcionMarca;
-		}
+			public String getMaquinaCodigo() {
+				return maquinaCodigo;
+			}
 
-		public String getModelo() {
-			return modelo;
-		}
+			public void setMaquinaCodigo(String maquinaCodigo) {
+				this.maquinaCodigo = maquinaCodigo;
+			}
 
-		public void setModelo(String modelo) {
-			this.modelo = modelo;
-		}
+			public String getMaquinaHoraKilometraje() {
+				return maquinaHoraKilometraje;
+			}
 
-		public String getColor() {
-			return color;
-		}
+			public void setMaquinaHoraKilometraje(String maquinaHoraKilometraje) {
+				this.maquinaHoraKilometraje = maquinaHoraKilometraje;
+			}
 
-		public void setColor(String color) {
-			this.color = color;
-		}
+			public int getMaquinaKilometraje() {
+				return maquinaKilometraje;
+			}
 
-		public String getNumeroPlaca() {
-			return numeroPlaca;
-		}
+			public void setMaquinaKilometraje(int maquinaKilometraje) {
+				this.maquinaKilometraje = maquinaKilometraje;
+			}
 
-		public void setNumeroPlaca(String numeroPlaca) {
-			this.numeroPlaca = numeroPlaca;
-		}
+			public String getModelo() {
+				return modelo;
+			}
 
-		public Integer getMaquinaKilometraje() {
-			return maquinaKilometraje;
-		}
+			public void setModelo(String modelo) {
+				this.modelo = modelo;
+			}
 
-		public void setMaquinaKilometraje(Integer maquinaKilometraje) {
-			this.maquinaKilometraje = maquinaKilometraje;
-		}
+			public String getNumeroPlaca() {
+				return numeroPlaca;
+			}
 
-		public String getMaquinaHoraKilometraje() {
-			return maquinaHoraKilometraje;
-		}
+			public void setNumeroPlaca(String numeroPlaca) {
+				this.numeroPlaca = numeroPlaca;
+			}
 
-		public void setMaquinaHoraKilometraje(String maquinaHoraKilometraje) {
-			this.maquinaHoraKilometraje = maquinaHoraKilometraje;
-		}
-	    
-	    
-    
-    
+			public String getDescripcionMarca() {
+				return descripcionMarca;
+			}
+
+			public void setDescripcionMarca(String descripcionMarca) {
+				this.descripcionMarca = descripcionMarca;
+			}
+
+			public String getDescripcionColor() {
+				return descripcionColor;
+			}
+
+			public void setDescripcionColor(String descripcionColor) {
+				this.descripcionColor = descripcionColor;
+			}
+
+			public String getNombreCompleto() {
+				return nombreCompleto;
+			}
+
+			public void setNombreCompleto(String nombreCompleto) {
+				this.nombreCompleto = nombreCompleto;
+			}
+
+			public String getNombreEmpresa() {
+				return nombreEmpresa;
+			}
+
+			public void setNombreEmpresa(String nombreEmpresa) {
+				this.nombreEmpresa = nombreEmpresa;
+			}
+
+			public String getNumeroMotor() {
+				return numeroMotor;
+			}
+
+			public void setNumeroMotor(String numeroMotor) {
+				this.numeroMotor = numeroMotor;
+			}  
+      
 
 }

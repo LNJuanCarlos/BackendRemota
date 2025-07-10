@@ -10,16 +10,11 @@ import prueba.remota.dto.CertificadoMantenimientoDto;
 
 @Service
 public class CertificadoMantenimientoService {
-	
-	 @Autowired
-	    private CertificadoMantenimientoDao dao;
 
-	    /*public List<CertificadoMantenimientoDto> obtener(String compania, int numeroDoc) {
-	        return dao.obtenerCertificado(compania, numeroDoc);
-	    }*/
-	    
-	    public CertificadoMantenimientoDto obtenerPorOrden(String ordenTrabajo) {
-	        return dao.obtenerPorOrden(ordenTrabajo);
-	    }
+    @Autowired
+    private CertificadoMantenimientoDao dao;
 
+    public List<CertificadoMantenimientoDto> obtener(String CompaniaSocio, int numeroDoc) {
+        return dao.obtenerPorCompaniaYNumeroDoc(CompaniaSocio, numeroDoc);
+    }
 }
