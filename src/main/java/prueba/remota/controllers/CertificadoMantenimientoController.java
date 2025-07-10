@@ -22,8 +22,8 @@ public class CertificadoMantenimientoController {
     @Autowired
     private CertificadoMantenimientoService service;
 
-    @GetMapping("/{companiaSocio}/{numerodoc}")
-    public List<CertificadoMantenimientoDto> obtener(@PathVariable String CompaniaSocio, @PathVariable int numerodoc) {
-        return service.obtener(CompaniaSocio, numerodoc);
+    @GetMapping("/{compania}/{numerodoc}")
+    public List<CertificadoMantenimientoDto> obtener(@PathVariable String compania, @PathVariable int numerodoc) {
+        return service.obtener(compania, numerodoc);
     }
 }

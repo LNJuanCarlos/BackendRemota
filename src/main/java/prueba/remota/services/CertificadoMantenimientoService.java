@@ -14,7 +14,7 @@ public class CertificadoMantenimientoService {
     @Autowired
     private CertificadoMantenimientoDao dao;
 
-    public List<CertificadoMantenimientoDto> obtener(String CompaniaSocio, int numeroDoc) {
-        return dao.obtenerPorCompaniaYNumeroDoc(CompaniaSocio, numeroDoc);
+    public List<CertificadoMantenimientoDto> obtener(String compania, int numeroDoc) {
+        return dao.obtenerCertificado(compania, numeroDoc);
     }
 }

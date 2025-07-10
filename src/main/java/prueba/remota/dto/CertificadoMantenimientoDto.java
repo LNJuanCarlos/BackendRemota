@@ -2,7 +2,7 @@ package prueba.remota.dto;
 
 public class CertificadoMantenimientoDto {
 
-	        private String CompaniaSocio;
+	        private String companiaSocio;
 	        private int numeroDoc;
 	        private String fecha;
 	        private String ordenTrabajo;
@@ -17,12 +17,12 @@ public class CertificadoMantenimientoDto {
 	        private String nombreEmpresa;
 	        private String numeroMotor;
 	        
-			public CertificadoMantenimientoDto(String CompaniaSocio, int numeroDoc, String fecha, String ordenTrabajo,
+			public CertificadoMantenimientoDto(String companiaSocio, int numeroDoc, String fecha, String ordenTrabajo,
 					String maquinaCodigo, String maquinaHoraKilometraje, int maquinaKilometraje, String modelo,
 					String numeroPlaca, String descripcionMarca, String descripcionColor, String nombreCompleto,
 					String nombreEmpresa, String numeroMotor) {
-				super();
-				this.CompaniaSocio = CompaniaSocio;
+				
+				this.companiaSocio = companiaSocio;
 				this.numeroDoc = numeroDoc;
 				this.fecha = fecha;
 				this.ordenTrabajo = ordenTrabajo;
@@ -38,12 +38,12 @@ public class CertificadoMantenimientoDto {
 				this.numeroMotor = numeroMotor;
 			}
 
-			public String getCompaniaSocio() {
-				return CompaniaSocio;
+			public String getcompaniaSocio() {
+				return companiaSocio;
 			}
 
-			public void setCompaniaSocio(String CompaniaSocio) {
-				this.CompaniaSocio = CompaniaSocio;
+			public void setcompaniaSocio(String companiaSocio) {
+				this.companiaSocio = companiaSocio;
 			}
 
 			public int getNumeroDoc() {
