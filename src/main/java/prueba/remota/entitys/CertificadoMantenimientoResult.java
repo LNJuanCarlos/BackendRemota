@@ -2,17 +2,8 @@ package prueba.remota.entitys;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.NamedStoredProcedureQuery;
-import javax.persistence.ParameterMode;
 import javax.persistence.SqlResultSetMapping;
-import javax.persistence.StoredProcedureParameter;
-
-import prueba.remota.dto.CertificadoMantenimientoDto;
-
 import javax.persistence.ConstructorResult;
-
-import java.util.Date;
-
 import javax.persistence.ColumnResult;
 
 @Entity
@@ -38,15 +29,7 @@ import javax.persistence.ColumnResult;
         }
     )
 )
-/*@NamedStoredProcedureQuery(
-    name = "CertificadoMantenimiento.obtenerCertificado",
-    procedureName = "sp_cr_listacab_web",
-    resultSetMappings = "CertificadoMantenimientoMapping",
-    parameters = {
-        @StoredProcedureParameter(mode = ParameterMode.IN, name = "CompaniaSocio", type = String.class),
-        @StoredProcedureParameter(mode = ParameterMode.IN, name = "numerodoc", type = Integer.class)
-    }
-)*/
+
 public class CertificadoMantenimientoResult {
     @Id
     private Long id; // Campo ficticio para que sea @Entity
