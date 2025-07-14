@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.SqlResultSetMapping;
 import javax.persistence.ConstructorResult;
+
+import java.util.Date;
+
 import javax.persistence.ColumnResult;
 
 @Entity
@@ -14,7 +17,7 @@ import javax.persistence.ColumnResult;
         columns = {
             @ColumnResult(name = "CompaniaSocio", type = String.class),
             @ColumnResult(name = "NumeroDoc", type = Integer.class),
-            @ColumnResult(name = "Fecha", type = String.class),
+            @ColumnResult(name = "Fecha", type = Date.class),
             @ColumnResult(name = "OrdenTrabajo", type = String.class),
             @ColumnResult(name = "MaquinaCodigo", type = String.class),
             @ColumnResult(name = "MaquinaHoraKilometraje", type = String.class),
