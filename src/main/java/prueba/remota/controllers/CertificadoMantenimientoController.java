@@ -30,10 +30,10 @@ public class CertificadoMantenimientoController {
         return service.obtener(compania, numerodoc);
     }
     
-    @GetMapping("/detalle/{compania}/{numeroDoc}")
+    /*@GetMapping("/detalle/{compania}/{numeroDoc}")
     public List<CertificadoMantenimientoDetalleDto> obtenerDetalle(
             @PathVariable String compania,
             @PathVariable int numeroDoc) {
         return detalleService.obtenerDetalle(compania, numeroDoc);
-    }
+    }*/
 }
