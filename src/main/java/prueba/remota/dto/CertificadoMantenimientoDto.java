@@ -1,10 +1,12 @@
 package prueba.remota.dto;
 
+import java.util.Date;
+
 public class CertificadoMantenimientoDto {
 
 	        private String companiaSocio;
 	        private int numeroDoc;
-	        private String fecha;
+	        private Date fecha;
 	        private String ordenTrabajo;
 	        private String maquinaCodigo;
 	        private String maquinaHoraKilometraje;
@@ -17,7 +19,7 @@ public class CertificadoMantenimientoDto {
 	        private String nombreEmpresa;
 	        private String numeroMotor;
 	        
-			public CertificadoMantenimientoDto(String companiaSocio, int numeroDoc, String fecha, String ordenTrabajo,
+			public CertificadoMantenimientoDto(String companiaSocio, int numeroDoc, Date fecha, String ordenTrabajo,
 					String maquinaCodigo, String maquinaHoraKilometraje, int maquinaKilometraje, String modelo,
 					String numeroPlaca, String descripcionMarca, String descripcionColor, String nombreCompleto,
 					String nombreEmpresa, String numeroMotor) {
@@ -54,11 +56,11 @@ public class CertificadoMantenimientoDto {
 				this.numeroDoc = numeroDoc;
 			}
 
-			public String getFecha() {
+			public Date getFecha() {
 				return fecha;
 			}
 
-			public void setFecha(String fecha) {
+			public void setFecha(Date fecha) {
 				this.fecha = fecha;
 			}
 
