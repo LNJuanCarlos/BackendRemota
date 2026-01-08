@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import prueba.remota.dto.CertificadoMantenimientoDetalleDto;
+//import prueba.remota.dto.CertificadoMantenimientoDetalleDto;
 import prueba.remota.dto.CertificadoMantenimientoDto;
-import prueba.remota.services.CertificadoMantenimientoDetalleService;
+//import prueba.remota.services.CertificadoMantenimientoDetalleService;
 import prueba.remota.services.CertificadoMantenimientoService;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -22,8 +22,8 @@ public class CertificadoMantenimientoController {
     @Autowired
     private CertificadoMantenimientoService service;
     
-    @Autowired
-    private CertificadoMantenimientoDetalleService detalleService;
+    //@Autowired
+    //private CertificadoMantenimientoDetalleService detalleService;
 
     @GetMapping("/{compania}/{numerodoc}")
     public List<CertificadoMantenimientoDto> obtener(@PathVariable String compania, @PathVariable int numerodoc) {
